@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif&display=swap');
+body{
+    font-family: 'PT Serif';
+    background-color: #b6dbc5;
+}
+h1{ 
+    color: #0011ff;
+        /* color: rgb(regreen,  */
+            /* color: rgb(0,0,0) red, green, blue maximum of 255 */
+}
