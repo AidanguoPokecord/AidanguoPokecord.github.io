@@ -3,6 +3,18 @@ body{
     font-family: 'PT Serif';
     background-color: #b6dbc5;
 }
+a:link {
+    color: black;
+    text-decoration: none;
+}
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    color: #ff5100;
+    text-decoration: underline;
+}
 h1{ 
     color: #0011ff;
         /* color: rgb(regreen,  */
