@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <script src="drawName.js"></script>
+    <script src="drawRuler.js"></script>
+    <script>
+        var canvas;
+        var ctx;
+        const UNIT = 30;
+        window.onload = init;
+        function init() {
+            setupCanvas();
+            drawName();
+            drawRuler(1);
+        }
+        function setupCanvas() {
+            canvas = document.getElementById("myCanvas");
+            ctx = canvas.getContext("2d");
+        }
+    </script>
+    <script src="drawRuler.js"></script>
+    <script src="drawName.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Name</h1>
+    </header>
+    <nav>
+        <a href="drawing.html"></a>
+
+    </nav>
+    <section>
+        <canvas id="myCanvas" width="800" height="1000"></canvas> </section> <footer>
+            <p>&copy;2019</p>
+            </footer>
+</body>
+
+</html>

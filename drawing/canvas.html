@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        var canvas; // Javascript canvas to connect with HTML Canvas.
+        var ctx;   // Context of canvas - 2D / 3D
+       
+        window.onload = init; // When the windor is loaded, run the init function
+        function init() {//The firstt function that is run.
+            setupCanvas();
+            drawEyes();
+            drawMouth();
+        }
+        //function: a set of instructions that can be used multiple times
+        //              A function must only do 1 thing.
+        function setupCanvas(){
+            canvas = document.getElementById("myCanvas"); // Connecting the HYML elementt that has ID of "MyCanvas".
+            ctx = canvas.getContext("2d"); // setting the context of the canvas to 2d.
+
+        }
+        function drawEyes(){
+            ctx.fillRect(300, 100, 100, 100);
+            ctx.fillRect(580, 100, 100, 100);
+        
+        }
+        function drawMouth(){
+            ctx.fillRect(300, 300, 70, 70);
+            ctx.fillRect(335, 350, 70, 70);
+            ctx.fillRect(380, 370, 70, 70);
+            ctx.fillRect(570, 350, 70, 70);
+            ctx.fillRect(525, 370, 70, 70);
+            ctx.fillRect(485, 390, 70, 70);
+            ctx.fillRect(440, 390, 70, 70);
+            ctx.fillRect(420, 390, 70, 70);
+            ctx.fillRect(600, 300, 70, 70);
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Canvas</h1>
+    </header>
+    <nav>
+        <a href="drawing.html">Drawing</a>
+    </nav>
+    <section>
+
+        <canvas id="myCanvas" width="1000" height="550"></canvas>
+    </section>
+
+    <footer>
+        <p>&copy;2019</p>
+    </footer>
+</body>
+
+</html>

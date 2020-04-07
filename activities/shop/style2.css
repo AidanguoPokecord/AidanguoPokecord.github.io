@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+body{
+    background-color: black;
+    color: white;
+    
+    font-family: "Indie Flower";
+}
+h1{
+    color: blue;
+}
+
+.images {
+    padding-top: 20px;
+    width: 99vw;
+    text-align: center;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.images:hover {
+    
+    width: 100vw;
+}
+h1{
+    font-size: 50px;
+}
+h2{
+    text-align: left;
+}
+.b{
+    text-align: left;
+}
+h3{
+    text-align: center;
+}
+a:link,
+a:visited {
+    color: blue;
+    text-decoration: none;
+}
+a:hover{
+    color: cornsilk;
+}
+.columns2 {
+    display: flex;
+    
+}
+.paragraphPadding {
+    padding-left: 340px;
+}
+.aLink {
+    font-size: 40px;
+    text-align: center;
+
+}
+.sysy{
+    text-align: left;
+}

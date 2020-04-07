@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+
+        const UNIT = 10;
+        var canvas;
+        var ctx;
+        window.onload = init;
+        function init() {
+            canvas = document.getElementById("MyCanvas")
+            ctx = canvas.getContext("2d");
+            drawBackground("#77DFEB","#79B563")
+            // drawKirby("default");
+            drawKirby("jump", 1, 0, 0);
+            //notes();
+            //drawKirby("walk1", 10, 10 )
+            //drawKirby("walk2", 40, 10 )
+            //drawKirby("walk3", 70, 10 )
+            //drawKirby("walk2")
+            // drawKirby1("walk");
+            //drawName(10, 25);            
+            drawRuler(10);
+        }
+    </script>
+    <script src="notes.js"></script>
+    <script src="drawName.js"></script>
+    <script src="drawRuler.js"></script>
+    <script src="drawKirby.js"></script>
+    <script src="drawKirbyWalk1.js"></script>
+    <script src="drawBackground.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Kirby</h1>
+
+    </header>
+    <nav>
+        <a href="drawing.html">Drawing</a>
+
+    </nav>
+
+    <section>
+        <canvas id="MyCanvas" width="1000" height="700"></canvas>
+    </section>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>

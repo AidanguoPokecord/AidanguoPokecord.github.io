@@ -3,6 +3,9 @@ body{
     font-family: 'PT Serif';
     background-color: #b6dbc5;
 }
+body{text-align: center;}
+
+
 a:link {
     color: black;
     text-decoration: none;
@@ -19,4 +22,9 @@ h1{
     color: #0011ff;
         /* color: rgb(regreen,  */
             /* color: rgb(0,0,0) red, green, blue maximum of 255 */
+}
+canvas{
+    border-width: 1px ;
+    border-style: solid;
+    border-color: black
 }

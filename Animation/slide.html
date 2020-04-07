@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<Head>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        var canvas;
+        var ctx;
+        var requestId;
+        var positionX = 0;
+        const UNIT = 5;
+        window.onload = init;
+        function init() {
+            setup();
+            requestId = requestAnimationFrame(animationLoop);
+        }
+        function setup() {
+            canvas = document.getElementById("myCanvas")
+            ctx = canvas.getContext("2d");
+        }
+        //the function theat repeats forevber to animate in the canvas
+        function animationLoop() {
+            // Erase everthing from the canvas.
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
+            incrementPositionX();
+            drawBackground("#c1e1fc","#a1fffd" ,0)
+            drawKirby("default",1, positionX,8*UNIT);
+
+            requestId = requestAnimationFrame(animationLoop)
+        }
+        function incrementPositionX() {
+            //position x  value increased by 1
+            positionX += 1;
+        }
+    </script>
+    <script src="../drawing/drawBackground.js"></script>
+    <script src="../drawing/drawKirby.js"></script>
+     </Head> <body>
+            <header>
+                <H1>Animation</H1>
+            </header>
+            <nav>
+                <a href="../index.html">Homepage</a>
+            </nav>
+            <section>
+                <canvas id="myCanvas" height="600" width="1000"> </canvas>
+            </section>
+            <footer>
+                <p>&copy; 2020</p>
+            </footer>
+
+
+        </body>
+</html >

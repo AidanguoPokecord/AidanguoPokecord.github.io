@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" href="../style.css">
+        <script>
+            var canvas;
+            var ctx;
+            var requestId;
+            var xPosition =0;
+            var yPosition=30;
+            var isJumping = false;
+            const UNIT = 10;
+            const JUMP_POSITION =10;
+            const PEAK_POSITION = 30;
+            const LAND_POSITION =50;
+            const ACCELERATION = 0.02;
+            window.onload = init;
+            function init (){
+                setupCanvas();
+                requestId = requestAnimationFrame(animationLoop);
+            }
+            function setupCanvas(){
+                canvas = document.getElementById("myCanvas");
+                ctx = canvas.getContext("2d");
+            }
+            function animationLoop(){
+                ctx.clearRect(0,0, canvas.width, canvas.height);
+
+                updatexPosition();
+                updateyPosition();
+                animateCharacter();
+                drawRuler(5);
+                requestId = requestAnimationFrame(animationLoop);
+            }
+            function updatexPosition(){
+                if (xPosition < canvas.width ){
+                    xPosition += 1;
+                } else{
+                    xPosition= 0;
+                }
+            }
+            function updateyPosition(){
+                if ((JUMP_POSITION<= xPosition) && (xPosition < PEAK_POSITION)){
+                    isJumping=true;
+                    yPosition *= ACCELERATION;
+                }else if((PEAK_POSITION<=xPosition)&&(xPosition < LAND_POSITION)){
+                    yPosition /= ACCELERATION;
+                    isJumping=true;
+                }else{
+                    isJumping=false;
+                }
+            }
+            function animateCharacter(){
+                ctx.save();
+                ctx.translate(xPosition, yPosition);
+                drawKirby();
+                if(isJumping){
+                    drawKirby("jump",1)
+                }else {
+                    drawKirby("walk",1)
+                    //todo Implement walking
+                }
+                ctx.restore();
+            }
+            
+        </script>
+        <script src="drawKirby.js"></script>
+        <script src="drawRuler.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Jump</h1>
+        </header>
+        <nav>
+            <a href="animation.html">Animation</a>
+        </nav>
+        <section>
+            <canvas id="myCanvas" width="600" height="500"></canvas>
+        </section>
+        <footer>
+
+        </footer>
+
+    </body>
+</html>
